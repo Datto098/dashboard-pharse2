@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Static files
 app.use('/dashboard', express.static(path.join(__dirname, '../src/view')));
 
-// Routes
+// Routes (mount at root because this function is served under /api on Vercel)
 const productRoutes = require('../src/routes/product.routes');
 const searchUrlRoutes = require('../src/routes/searchUrl.routes');
 const crawlerIntegrationRoutes = require('../src/routes/crawlerIntegration.routes');
@@ -44,13 +44,13 @@ const referralFeeRuleRoutes = require('../src/routes/referralFeeRule.routes');
 const fbaFeeRuleRoutes = require('../src/routes/fbaFeeRule.routes');
 const sizeTierRuleRoutes = require('../src/routes/sizeTierRule.routes');
 const filterTemplateRoutes = require('../src/routes/filterTemplate.routes');
-app.use('/api', productRoutes);
-app.use('/api/search-urls', searchUrlRoutes);
-app.use('/api/crawler', crawlerIntegrationRoutes);
-app.use('/api', referralFeeRuleRoutes);
-app.use('/api', fbaFeeRuleRoutes);
-app.use('/api/size-tier-rules', sizeTierRuleRoutes);
-app.use('/api/filter-templates', filterTemplateRoutes);
+app.use('/', productRoutes); // -> /api/products, etc.
+app.use('/search-urls', searchUrlRoutes); // -> /api/search-urls
+app.use('/crawler', crawlerIntegrationRoutes); // -> /api/crawler
+app.use('/', referralFeeRuleRoutes); // -> /api/fba-fee-rules, /api/fee-rules
+app.use('/', fbaFeeRuleRoutes);
+app.use('/size-tier-rules', sizeTierRuleRoutes);
+app.use('/filter-templates', filterTemplateRoutes);
 
 // Health check endpoint
 app.get('/', (req, res) => {
