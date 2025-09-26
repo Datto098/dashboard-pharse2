@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Static files
 app.use('/dashboard', express.static(path.join(__dirname, '../src/view')));
 
-// Routes: mount at root. Vercel function lives at /api/*, Express should see paths without the /api prefix.
+// Routes: mount under /api because rewrites forward /api/* to this handler keeping the path
 const productRoutes = require('../src/routes/product.routes');
 const searchUrlRoutes = require('../src/routes/searchUrl.routes');
 const crawlerIntegrationRoutes = require('../src/routes/crawlerIntegration.routes');
@@ -44,13 +44,13 @@ const referralFeeRuleRoutes = require('../src/routes/referralFeeRule.routes');
 const fbaFeeRuleRoutes = require('../src/routes/fbaFeeRule.routes');
 const sizeTierRuleRoutes = require('../src/routes/sizeTierRule.routes');
 const filterTemplateRoutes = require('../src/routes/filterTemplate.routes');
-app.use('/', productRoutes); // -> /products → externally /api/products
-app.use('/search-urls', searchUrlRoutes); // -> /api/search-urls
-app.use('/crawler', crawlerIntegrationRoutes); // -> /api/crawler
-app.use('/', referralFeeRuleRoutes); // -> /api/fee-rules, /api/fba-fee-rules
-app.use('/', fbaFeeRuleRoutes);
-app.use('/size-tier-rules', sizeTierRuleRoutes);
-app.use('/filter-templates', filterTemplateRoutes);
+app.use('/api', productRoutes);
+app.use('/api/search-urls', searchUrlRoutes);
+app.use('/api/crawler', crawlerIntegrationRoutes);
+app.use('/api', referralFeeRuleRoutes);
+app.use('/api', fbaFeeRuleRoutes);
+app.use('/api/size-tier-rules', sizeTierRuleRoutes);
+app.use('/api/filter-templates', filterTemplateRoutes);
 
 // Health check endpoint
 app.get('/', (req, res) => {
@@ -62,8 +62,8 @@ app.get('/', (req, res) => {
 	});
 });
 
-// Config endpoint (mounted at /config; externally /api/config)
-app.get('/config', (req, res) => {
+// Config endpoint
+app.get('/api/config', (req, res) => {
 	res.json({
 		API_BASE_URL: process.env.API_BASE_URL || '',
 		CRAWLER_API_ENDPOINT: process.env.CRAWLER_API_ENDPOINT || '',
