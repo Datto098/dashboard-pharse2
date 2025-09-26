@@ -1,3 +1,4 @@
 const app = require('./index');
 
-module.exports = app;
+// Export as a request handler so Vercel Serverless can invoke Express correctly
+module.exports = (req, res) => app(req, res);
