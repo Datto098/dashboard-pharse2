@@ -62,8 +62,8 @@ exports.importFromExcel = async (req, res) => {
 	try {
 		if (!req.file)
 			return res.status(400).json({ error: 'No file uploaded' });
-		const path = req.file.path;
-		const result = await ruleService.importFromExcel(path);
+		const fileInput = req.file.buffer || req.file.path;
+		const result = await ruleService.importFromExcel(fileInput);
 		res.json(result);
 	} catch (err) {
 		res.status(500).json({ error: err.message });

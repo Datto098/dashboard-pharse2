@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "68d6173e0c9ad5f86ac8d135"
+  },
+  "tier": "Small standard-size",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-09-26T04:31:57.349Z"
+  },
+  "lengthGirthMax": null,
+  "longestMax": 15,
+  "medianMax": 12,
+  "shippingWeightMax": 16,
+  "shortestMax": 0.75,
+  "unitLength": "in",
+  "unitWeight": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:31:57.349Z"
+  },
+  "variant": ""
+},
+{
+  "_id": {
+    "$oid": "68d6173e0c9ad5f86ac8d137"
+  },
+  "tier": "Large standard-size",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-09-26T04:31:58.602Z"
+  },
+  "lengthGirthMax": null,
+  "longestMax": 18,
+  "medianMax": 14,
+  "shippingWeightMax": 20,
+  "shortestMax": 8,
+  "unitLength": "in",
+  "unitWeight": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:31:58.602Z"
+  },
+  "variant": ""
+},
+{
+  "_id": {
+    "$oid": "68d6173e0c9ad5f86ac8d139"
+  },
+  "tier": "Small oversize",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-09-26T04:31:58.604Z"
+  },
+  "lengthGirthMax": 130,
+  "longestMax": 60,
+  "medianMax": 30,
+  "shippingWeightMax": 70,
+  "shortestMax": null,
+  "unitLength": "in",
+  "unitWeight": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:31:58.604Z"
+  },
+  "variant": ""
+},
+{
+  "_id": {
+    "$oid": "68d6173e0c9ad5f86ac8d13b"
+  },
+  "tier": "Medium oversize",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-09-26T04:31:58.606Z"
+  },
+  "lengthGirthMax": 130,
+  "longestMax": 108,
+  "medianMax": null,
+  "shippingWeightMax": 150,
+  "shortestMax": null,
+  "unitLength": "in",
+  "unitWeight": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:31:58.606Z"
+  },
+  "variant": ""
+},
+{
+  "_id": {
+    "$oid": "68d6173e0c9ad5f86ac8d13d"
+  },
+  "tier": "Large oversize",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-09-26T04:31:58.608Z"
+  },
+  "lengthGirthMax": 165,
+  "longestMax": 108,
+  "medianMax": null,
+  "shippingWeightMax": 150,
+  "shortestMax": null,
+  "unitLength": "in",
+  "unitWeight": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:31:58.608Z"
+  },
+  "variant": ""
+},
+{
+  "_id": {
+    "$oid": "68d6173e0c9ad5f86ac8d13f"
+  },
+  "tier": "Special oversize",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-09-26T04:31:58.610Z"
+  },
+  "lengthGirthMax": 165,
+  "longestMax": 108,
+  "medianMax": null,
+  "shippingWeightMax": 150,
+  "shortestMax": null,
+  "unitLength": "in",
+  "unitWeight": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:31:58.610Z"
+  },
+  "variant": ""
+}]

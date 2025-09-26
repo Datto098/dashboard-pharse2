@@ -69,10 +69,13 @@ const deleteRule = async (id) => SizeTierRule.findByIdAndDelete(id);
 
 const deleteAllRules = async () => SizeTierRule.deleteMany();
 
-const importFromExcel = async (filePath) => {
+// Accepts either a disk path (string) or a Buffer
+const importFromExcel = async (fileInput) => {
 	const XLSX = require('xlsx');
 	try {
-		const wb = XLSX.readFile(filePath);
+		const wb = Buffer.isBuffer(fileInput)
+			? XLSX.read(fileInput, { type: 'buffer' })
+			: XLSX.readFile(fileInput);
 		const sheet = wb.Sheets[wb.SheetNames[0]];
 		const rows = XLSX.utils.sheet_to_json(sheet, { defval: '' });
 
@@ -158,9 +161,11 @@ const importFromExcel = async (filePath) => {
 
 		return { created, updated, skipped, total: rows.length };
 	} finally {
-		try {
-			require('fs').unlinkSync(filePath);
-		} catch (e) {}
+		if (typeof fileInput === 'string') {
+			try {
+				require('fs').unlinkSync(fileInput);
+			} catch (e) {}
+		}
 	}
 };
 

@@ -1,0 +1,586 @@
+[{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf66"
+  },
+  "weightMin": 0,
+  "weightMax": 2,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.729Z"
+  },
+  "feeUSD": 3.06,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.729Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf68"
+  },
+  "weightMin": 2,
+  "weightMax": 4,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.761Z"
+  },
+  "feeUSD": 3.15,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.761Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf6a"
+  },
+  "weightMin": 4,
+  "weightMax": 6,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.764Z"
+  },
+  "feeUSD": 3.24,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.764Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf6c"
+  },
+  "weightMin": 6,
+  "weightMax": 8,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.767Z"
+  },
+  "feeUSD": 3.33,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.767Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf6e"
+  },
+  "weightMin": 8,
+  "weightMax": 10,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.771Z"
+  },
+  "feeUSD": 3.43,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf70"
+  },
+  "weightMin": 10,
+  "weightMax": 12,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.774Z"
+  },
+  "feeUSD": 3.53,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.774Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf72"
+  },
+  "weightMin": 12,
+  "weightMax": 14,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.777Z"
+  },
+  "feeUSD": 3.6,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.777Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf74"
+  },
+  "weightMin": 14,
+  "weightMax": 16,
+  "variant": "",
+  "tier": "Small Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.779Z"
+  },
+  "feeUSD": 3.65,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.779Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf76"
+  },
+  "weightMin": 4,
+  "weightMax": 8,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.781Z"
+  },
+  "feeUSD": 3.68,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.781Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf78"
+  },
+  "weightMin": 8,
+  "weightMax": 12,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.784Z"
+  },
+  "feeUSD": 3.9,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.784Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf7a"
+  },
+  "weightMin": 12,
+  "weightMax": 16,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.787Z"
+  },
+  "feeUSD": 4.55,
+  "overageRules": [],
+  "unit": "oz",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.789Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf7d"
+  },
+  "weightMin": 1,
+  "weightMax": 1.25,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.792Z"
+  },
+  "feeUSD": 4.99,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.792Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf7f"
+  },
+  "weightMin": 1.25,
+  "weightMax": 1.5,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.794Z"
+  },
+  "feeUSD": 5.37,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.794Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf81"
+  },
+  "weightMin": 1.5,
+  "weightMax": 1.75,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.797Z"
+  },
+  "feeUSD": 5.52,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.797Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf83"
+  },
+  "weightMin": 1.75,
+  "weightMax": 2,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.800Z"
+  },
+  "feeUSD": 5.77,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.800Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf85"
+  },
+  "weightMin": 2,
+  "weightMax": 2.25,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.802Z"
+  },
+  "feeUSD": 5.87,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.802Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf87"
+  },
+  "weightMin": 2.25,
+  "weightMax": 2.5,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.805Z"
+  },
+  "feeUSD": 6.05,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.805Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf89"
+  },
+  "weightMin": 2.5,
+  "weightMax": 2.75,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.807Z"
+  },
+  "feeUSD": 6.21,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.807Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf8b"
+  },
+  "weightMin": 2.75,
+  "weightMax": 3,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.809Z"
+  },
+  "feeUSD": 6.62,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf8d"
+  },
+  "weightMin": 3,
+  "weightMax": 20,
+  "variant": "",
+  "tier": "Large Standard",
+  "__v": 0,
+  "baseUSD": 6.92,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.811Z"
+  },
+  "feeUSD": null,
+  "overageRules": [
+    {
+      "overThresholdValue": 3,
+      "overThresholdUnit": "lb",
+      "stepValue": 4,
+      "stepUnit": "oz",
+      "stepFeeUSD": 0.08,
+      "_id": {
+        "$oid": "68d61546cc037ba35e86ac55"
+      }
+    }
+  ],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.813Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf90"
+  },
+  "weightMin": 1,
+  "weightMax": 50,
+  "variant": "",
+  "tier": "Large Bulky",
+  "__v": 0,
+  "baseUSD": 9.61,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.818Z"
+  },
+  "feeUSD": null,
+  "overageRules": [
+    {
+      "overThresholdValue": 1,
+      "overThresholdUnit": "lb",
+      "stepValue": 1,
+      "stepUnit": "lb",
+      "stepFeeUSD": 0.38,
+      "_id": {
+        "$oid": "68d61546cc037ba35e86ac58"
+      }
+    }
+  ],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.820Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf93"
+  },
+  "weightMin": 0,
+  "weightMax": 50,
+  "variant": "",
+  "tier": "Extra Large",
+  "__v": 0,
+  "baseUSD": 26.33,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.823Z"
+  },
+  "feeUSD": null,
+  "overageRules": [
+    {
+      "overThresholdValue": 1,
+      "overThresholdUnit": "lb",
+      "stepValue": 1,
+      "stepUnit": "lb",
+      "stepFeeUSD": 0.38,
+      "_id": {
+        "$oid": "68d61546cc037ba35e86ac5b"
+      }
+    }
+  ],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.825Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf96"
+  },
+  "weightMin": 50,
+  "weightMax": 70,
+  "variant": "",
+  "tier": "Extra Large",
+  "__v": 0,
+  "baseUSD": 40.12,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.827Z"
+  },
+  "feeUSD": null,
+  "overageRules": [
+    {
+      "overThresholdValue": 51,
+      "overThresholdUnit": "lb",
+      "stepValue": 1,
+      "stepUnit": "lb",
+      "stepFeeUSD": 0.75,
+      "_id": {
+        "$oid": "68d61546cc037ba35e86ac5e"
+      }
+    }
+  ],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.829Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf99"
+  },
+  "weightMin": 70,
+  "weightMax": 150,
+  "variant": "",
+  "tier": "Extra Large",
+  "__v": 0,
+  "baseUSD": 54.81,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.831Z"
+  },
+  "feeUSD": null,
+  "overageRules": [
+    {
+      "overThresholdValue": 71,
+      "overThresholdUnit": "lb",
+      "stepValue": 1,
+      "stepUnit": "lb",
+      "stepFeeUSD": 0.75,
+      "_id": {
+        "$oid": "68d61546cc037ba35e86ac61"
+      }
+    }
+  ],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.832Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf9c"
+  },
+  "weightMin": 150,
+  "weightMax": null,
+  "variant": "",
+  "tier": "Extra Large",
+  "__v": 0,
+  "baseUSD": 194.95,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.834Z"
+  },
+  "feeUSD": null,
+  "overageRules": [
+    {
+      "overThresholdValue": 151,
+      "overThresholdUnit": "lb",
+      "stepValue": 1,
+      "stepUnit": "lb",
+      "stepFeeUSD": 0.19,
+      "_id": {
+        "$oid": "68d61546cc037ba35e86ac64"
+      }
+    }
+  ],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.836Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68d615460c9ad5f86ac8cf9f"
+  },
+  "weightMin": 0,
+  "weightMax": null,
+  "variant": "",
+  "tier": "Oversize",
+  "__v": 0,
+  "baseUSD": null,
+  "createdAt": {
+    "$date": "2025-09-26T04:23:34.839Z"
+  },
+  "feeUSD": 10,
+  "overageRules": [],
+  "unit": "lb",
+  "updatedAt": {
+    "$date": "2025-09-26T04:23:34.841Z"
+  }
+}]

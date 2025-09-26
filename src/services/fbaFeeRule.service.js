@@ -76,11 +76,13 @@ const deleteAllRules = async () => {
 	return await FbaFeeRule.deleteMany();
 };
 
-const importFromExcel = async (filePath) => {
+// Accepts either a disk path (string) or a Buffer
+const importFromExcel = async (fileInput) => {
 	const XLSX = require('xlsx');
-	const fs = require('fs');
 	try {
-		const workbook = XLSX.readFile(filePath);
+		const workbook = Buffer.isBuffer(fileInput)
+			? XLSX.read(fileInput, { type: 'buffer' })
+			: XLSX.readFile(fileInput);
 		const sheetName = workbook.SheetNames[0];
 		const sheet = workbook.Sheets[sheetName];
 		const rows = XLSX.utils.sheet_to_json(sheet, { defval: '' });
@@ -224,9 +226,12 @@ const importFromExcel = async (filePath) => {
 
 		return { created, updated, skipped, total: rows.length };
 	} finally {
-		try {
-			require('fs').unlinkSync(filePath);
-		} catch (e) {}
+		// If we were passed a path, try to remove it; ignore errors
+		if (typeof fileInput === 'string') {
+			try {
+				require('fs').unlinkSync(fileInput);
+			} catch (e) {}
+		}
 	}
 };
 
