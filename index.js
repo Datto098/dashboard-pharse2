@@ -11,15 +11,13 @@ const MONGO_URI =
 // MongoDB connection with better error handling
 mongoose
 	.connect(MONGO_URI, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
 		maxPoolSize: 10,
 		serverSelectionTimeoutMS: 5000,
 		socketTimeoutMS: 45000,
 	})
-	.then(() => console.log('✅ Connected to MongoDB'))
+	.then(() => console.log('Connected to MongoDB'))
 	.catch((err) => {
-		console.error('❌ MongoDB connection error:', err);
+		console.error('MongoDB connection error:', err);
 		// Don't exit in serverless environment
 		if (process.env.NODE_ENV !== 'production') {
 			process.exit(1);

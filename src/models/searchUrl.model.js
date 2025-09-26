@@ -53,7 +53,7 @@ const searchUrlSchema = new mongoose.Schema(
 );
 
 // Index để tối ưu hóa truy vấn
-searchUrlSchema.index({ url: 1 });
+// Note: url index is automatically created by unique: true
 searchUrlSchema.index({ 'products.asin': 1 });
 searchUrlSchema.index({ last_crawled_at: -1 });
 searchUrlSchema.index({ createdAt: -1 });

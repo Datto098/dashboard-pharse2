@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
+
+// Use memory storage for serverless environment
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 const ctrl = require('../controllers/sizeTierRule.controller');
 
 router.get('/', ctrl.getAllRules);

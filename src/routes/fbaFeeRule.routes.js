@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/fbaFeeRule.controller');
 const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
+
+// Use memory storage for serverless environment
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 router.post('/fba-fee-rules', controller.createRule);
 router.get('/fba-fee-rules', controller.getAllRules);
