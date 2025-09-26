@@ -48,6 +48,7 @@ const referralFeeRuleRoutes = require('./src/routes/referralFeeRule.routes');
 const fbaFeeRuleRoutes = require('./src/routes/fbaFeeRule.routes');
 const sizeTierRuleRoutes = require('./src/routes/sizeTierRule.routes');
 const filterTemplateRoutes = require('./src/routes/filterTemplate.routes');
+
 app.use('/api', productRoutes);
 app.use('/api/search-urls', searchUrlRoutes);
 app.use('/api/crawler', crawlerIntegrationRoutes);

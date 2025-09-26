@@ -2,6 +2,15 @@ const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/product.controller');
 
+// Validate Mongo ObjectId to avoid catching named routes like 'count'
+const validateObjectId = (req, res, next) => {
+	const { id } = req.params;
+	if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+		return res.status(400).json({ error: 'Invalid ID format' });
+	}
+	next();
+};
+
 // CRUD operations
 router.post('/products', productController.createProduct);
 router.get('/products', productController.getAllProducts);
@@ -31,8 +40,12 @@ router.get('/products/test', async (req, res) => {
 router.post('/products/delete-all', productController.deleteAllProducts);
 
 // Parameterized routes - MUST be after specific routes
-router.get('/products/:id', productController.getProductById);
-router.put('/products/:id', productController.updateProduct);
-router.delete('/products/:id', productController.deleteProduct);
+router.get('/products/:id', validateObjectId, productController.getProductById);
+router.put('/products/:id', validateObjectId, productController.updateProduct);
+router.delete(
+	'/products/:id',
+	validateObjectId,
+	productController.deleteProduct
+);
 
 module.exports = router;
