@@ -8,18 +8,27 @@ const MONGO_URI =
 	process.env.MONGO_URI ||
 	'mongodb+srv://nguyentiendat098:NguyenTienDat098@cluster0.rv7ojc4.mongodb.net/dashboardp2';
 
-// MongoDB connection with better error handling
-mongoose
-	.connect(MONGO_URI, {
-		maxPoolSize: 10,
-		serverSelectionTimeoutMS: 5000,
-		socketTimeoutMS: 45000,
-	})
-	.then(() => console.log('Connected to MongoDB'))
-	.catch((err) => {
-		console.error('MongoDB connection error:', err);
-		// Don't exit in serverless environment
-	});
+// MongoDB connection with better error handling and lazy ensure
+const mongooseOptions = {
+	maxPoolSize: 10,
+	serverSelectionTimeoutMS: 30000,
+	socketTimeoutMS: 60000,
+};
+
+let connectPromise = null;
+
+async function ensureDbConnected() {
+	if (mongoose.connection.readyState === 1) return; // already connected
+	if (!connectPromise) {
+		connectPromise = mongoose
+			.connect(MONGO_URI, mongooseOptions)
+			.then(() => {
+				console.log('Connected to MongoDB');
+				return mongoose.connection;
+			});
+	}
+	return connectPromise;
+}
 
 const app = express();
 
@@ -32,6 +41,17 @@ app.use(
 );
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Ensure DB connection for every request (no-op if already connected)
+app.use(async (req, res, next) => {
+	try {
+		await ensureDbConnected();
+		return next();
+	} catch (err) {
+		console.error('Failed to connect to MongoDB for request:', err);
+		return res.status(500).json({ error: 'DB_CONNECT_ERROR' });
+	}
+});
 
 // Static files
 app.use('/dashboard', express.static(path.join(__dirname, '../src/view')));
