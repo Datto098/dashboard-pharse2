@@ -5,8 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const MONGO_URI =
-	process.env.MONGO_URI ||
-	'mongodb+srv://nguyentiendat098:NguyenTienDat098@cluster0.rv7ojc4.mongodb.net/dashboardp2';
+	process.env.MONGO_URI || 'mongodb://localhost:27017/dashboard';
 
 // MongoDB connection with better error handling
 mongoose
@@ -21,13 +20,9 @@ mongoose
 	.catch((err) => {
 		console.error('❌ MongoDB connection error:', err);
 		// Don't exit in serverless environment
-		if (process.env.NODE_ENV !== 'production') {
-			process.exit(1);
-		}
 	});
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(
@@ -40,16 +35,16 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Static files
-app.use('/dashboard', express.static(path.join(__dirname, 'src/view')));
+app.use('/dashboard', express.static(path.join(__dirname, '../src/view')));
 
 // Routes
-const productRoutes = require('./src/routes/product.routes');
-const searchUrlRoutes = require('./src/routes/searchUrl.routes');
-const crawlerIntegrationRoutes = require('./src/routes/crawlerIntegration.routes');
-const referralFeeRuleRoutes = require('./src/routes/referralFeeRule.routes');
-const fbaFeeRuleRoutes = require('./src/routes/fbaFeeRule.routes');
-const sizeTierRuleRoutes = require('./src/routes/sizeTierRule.routes');
-const filterTemplateRoutes = require('./src/routes/filterTemplate.routes');
+const productRoutes = require('../src/routes/product.routes');
+const searchUrlRoutes = require('../src/routes/searchUrl.routes');
+const crawlerIntegrationRoutes = require('../src/routes/crawlerIntegration.routes');
+const referralFeeRuleRoutes = require('../src/routes/referralFeeRule.routes');
+const fbaFeeRuleRoutes = require('../src/routes/fbaFeeRule.routes');
+const sizeTierRuleRoutes = require('../src/routes/sizeTierRule.routes');
+const filterTemplateRoutes = require('../src/routes/filterTemplate.routes');
 app.use('/api', productRoutes);
 app.use('/api/search-urls', searchUrlRoutes);
 app.use('/api/crawler', crawlerIntegrationRoutes);
@@ -97,37 +92,17 @@ app.use('*', (req, res) => {
 	});
 });
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-	console.log('SIGTERM received, shutting down gracefully');
-	mongoose.connection.close(() => {
-		console.log('MongoDB connection closed');
-		process.exit(0);
-	});
-});
+// Initialize default templates on startup (only in serverless environment)
+const filterTemplateService = require('../src/services/filterTemplate.service');
 
-// Initialize default templates on startup
-const filterTemplateService = require('./src/services/filterTemplate.service');
+// Initialize default filter templates
+(async () => {
+	try {
+		await filterTemplateService.createDefaultTemplates();
+		console.log('✅ Default filter templates initialized');
+	} catch (error) {
+		console.log('⚠️  Default templates already exist or error occurred');
+	}
+})();
 
-// Only start server if not in serverless environment
-if (process.env.NODE_ENV !== 'production' || process.env.VERCEL !== '1') {
-	app.listen(port, async () => {
-		console.log(`🚀 API server listening at http://localhost:${port}`);
-		console.log(
-			`📊 Dashboard available at http://localhost:${port}/dashboard`
-		);
-
-		// Create default filter templates
-		try {
-			await filterTemplateService.createDefaultTemplates();
-			console.log('✅ Default filter templates initialized');
-		} catch (error) {
-			console.log(
-				'⚠️  Default templates already exist or error occurred'
-			);
-		}
-	});
-}
-
-// Export for Vercel
 module.exports = app;
